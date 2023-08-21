@@ -1,8 +1,6 @@
 from setuptools import find_packages, setup
 
-entry_point = (
-    "kube-data-collector = kube_data_collector.__main__:main"
-)
+entry_point = "kube-data-collector = kube_data_collector.__main__:main"
 
 
 # get the dependencies and installs

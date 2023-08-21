@@ -1,0 +1,49 @@
+# This is a boilerplate parameters config generated for pipeline 'forex_collector'
+# using Kedro 0.18.12.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://docs.kedro.org/en/0.18.12/kedro_project_setup/configuration.html#parameters
+
+
+# conf/base/parameters/parameters.yml
+
+forex_collector_config:
+  configurations:
+    10_min:
+      alignmentTimezone: America/New_York
+      count: 500
+      dailyAlignment: 17
+      granularity: M10
+      price: M
+      smooth: false
+      units: 1
+      weeklyAlignment: Friday
+    15_min:
+      alignmentTimezone: America/New_York
+      count: 750
+      dailyAlignment: 17
+      granularity: M15
+      price: M
+      smooth: true
+      units: 2
+      weeklyAlignment: Friday
+    30_min:
+      alignmentTimezone: America/New_York
+      count: 1000
+      dailyAlignment: 17
+      granularity: M30
+      price: M
+      smooth: false
+      units: 3
+      weeklyAlignment: Friday
+  instruments:
+  - EUR_USD
+  - USD_JPY
+  - GBP_USD
+  - AUD_USD
+  - USD_CAD
+  - EUR_JPY
+  - GBP_JPY
+  - AUD_JPY
+  - EUR_GBP
+  - USD_CHF
