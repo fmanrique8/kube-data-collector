@@ -14,7 +14,7 @@ def forex_data_collector_node(
     accountID: str,
     base_url: str,
     endpoint: str,
-    forex_collector_config: dict
+    forex_collector_config: dict,
 ) -> pd.DataFrame:
     """
     A Kedro node function to fetch and process forex data based on given configurations.
