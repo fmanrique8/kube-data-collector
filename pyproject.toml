@@ -1,3 +1,5 @@
+# kube-data-collector/pyproject.toml
+
 [tool.poetry]
 name = "kube-data-collector"
 version = "0.1.0"
