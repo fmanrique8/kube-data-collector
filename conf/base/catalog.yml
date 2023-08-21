@@ -2,3 +2,16 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+
+10_min_dataframe:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/10_min.csv
+
+15_min_dataframe:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/15_min.csv
+
+30_min_dataframe:
+  type: pandas.CSVDataSet
+  filepath: data/01_raw/30_min.csv
