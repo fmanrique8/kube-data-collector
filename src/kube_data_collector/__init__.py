@@ -7,7 +7,7 @@ import logging
 import coloredlogs
 
 # Create a logger for the forex app
-logger = logging.getLogger("forex")
+logger = logging.getLogger("Kube-Data-Collector")
 
 # Basic logging format
 fmt = "%(asctime)s - %(levelname)s - %(message)s"

@@ -933,6 +933,23 @@ yaml = ["PyYAML (>=4.2,<7.0)", "pandas (>=1.3,<2.0)"]
 yaml-yamldataset = ["PyYAML (>=4.2,<7.0)", "pandas (>=1.3,<2.0)"]
 
 [[package]]
+name = "kedro-docker"
+version = "0.3.1"
+description = "Kedro-Docker makes it easy to package Kedro projects with Docker."
+category = "main"
+optional = false
+python-versions = ">=3.7, <3.11"
+files = [
+    {file = "kedro-docker-0.3.1.tar.gz", hash = "sha256:93d3c0767995becff6efb4d3b463eb1d4e36bc2e4a7eec3b83f1d0cb0b7404d2"},
+    {file = "kedro_docker-0.3.1-py3-none-any.whl", hash = "sha256:9ad36e8be645403e2cf60f18ee1523edab5ef2b8140301b1647f255b073f25cf"},
+]
+
+[package.dependencies]
+anyconfig = ">=0.10.0,<0.11.0"
+kedro = ">=0.16.0"
+semver = ">=2.10,<3.0"
+
+[[package]]
 name = "kedro-telemetry"
 version = "0.2.5"
 description = "Kedro-Telemetry"
@@ -1235,10 +1252,7 @@ files = [
 ]
 
 [package.dependencies]
-numpy = [
-    {version = ">=1.21.0", markers = "python_version >= \"3.10\""},
-    {version = ">=1.23.2", markers = "python_version >= \"3.11\""},
-]
+numpy = {version = ">=1.21.0", markers = "python_version >= \"3.10\""}
 python-dateutil = ">=2.8.2"
 pytz = ">=2020.1"
 tzdata = ">=2022.1"
@@ -1896,6 +1910,18 @@ files = [
 ]
 
 [[package]]
+name = "semver"
+version = "2.13.0"
+description = "Python helper for Semantic Versioning (http://semver.org/)"
+category = "main"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+files = [
+    {file = "semver-2.13.0-py2.py3-none-any.whl", hash = "sha256:ced8b23dceb22134307c1b8abfa523da14198793d9787ac838e70e29e77458d4"},
+    {file = "semver-2.13.0.tar.gz", hash = "sha256:fa0fe2722ee1c3f57eac478820c3a5ae2f624af8264cbdf9000c980ff7f75e3f"},
+]
+
+[[package]]
 name = "setuptools"
 version = "68.1.2"
 description = "Easily download, build, install, upgrade, and uninstall Python packages"
@@ -2095,5 +2121,5 @@ testing = ["big-O", "jaraco.functools", "jaraco.itertools", "more-itertools", "p
 
 [metadata]
 lock-version = "2.0"
-python-versions = "^3.10"
-content-hash = "70e3e32086fc577abe279ed78a50b9936805b2c02da90ba343356fc159f1781b"
+python-versions = ">=3.10,<3.11"
+content-hash = "bb26618428aa24c251bc788856f8d2a200d3b9e33c9cf4c56d6d48d26662af9a"
