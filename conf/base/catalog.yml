@@ -6,12 +6,25 @@
 
 10_min_dataframe:
   type: pandas.CSVDataSet
-  filepath: data/01_raw/10_min.csv
+  filepath: data/01_raw/forex/10_min.csv
 
 15_min_dataframe:
   type: pandas.CSVDataSet
-  filepath: data/01_raw/15_min.csv
+  filepath: data/01_raw/forex/15_min.csv
 
 30_min_dataframe:
   type: pandas.CSVDataSet
-  filepath: data/01_raw/30_min.csv
+  filepath: data/01_raw/forex/30_min.csv
+
+
+10_min_intermediate:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/forex/10_min.csv
+
+15_min_intermediate:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/forex/15_min.csv
+
+30_min_intermediate:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/forex/30_min.csv
