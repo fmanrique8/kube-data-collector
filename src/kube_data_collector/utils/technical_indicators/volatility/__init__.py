@@ -1,0 +1,2 @@
+"""kube-data-collector
+"""

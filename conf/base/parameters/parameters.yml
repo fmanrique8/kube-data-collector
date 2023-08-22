@@ -39,13 +39,5 @@ forex_collector_config:
   instruments:
   - EUR_USD
   - USD_JPY
-  - GBP_USD
-  - AUD_USD
-  - USD_CAD
-  - EUR_JPY
-  - GBP_JPY
-  - AUD_JPY
-  - EUR_GBP
-  - USD_CHF
 
 
