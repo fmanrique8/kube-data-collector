@@ -4,8 +4,8 @@ generated using Kedro 0.18.12
 """
 
 import pandas as pd
-from kube_data_collector.utils.FetchInstruments import FetchInstruments
-from kube_data_collector.utils.CreateDataframe import CreateDataframe
+from kube_data_collector.utils.data_processing.FetchInstruments import FetchInstruments
+from kube_data_collector.utils.data_processing.CreateDataframe import CreateDataframe
 
 
 def forex_data_collector_node(

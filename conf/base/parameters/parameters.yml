@@ -40,4 +40,26 @@ forex_collector_config:
   - EUR_USD
   - USD_JPY
 
+primary_data_config:
+  configurations:
+    roc_periods:
+      10_min: 6
+      15_min: 4
+      30_min: 2
+    rsi_periods:
+      10_min: 14
+      15_min: 14
+      30_min: 14
+    stochastic_oscillator_periods:
+      10_min:
+        n: 9
+        smoothing: 3
+      15_min:
+        n: 14
+        smoothing: 3
+      30_min:
+        n: 14
+        smoothing: 5
+
+
 

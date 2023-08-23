@@ -1,16 +1,15 @@
 """
-This is a boilerplate pipeline 'data_processor'
+This is a boilerplate pipeline 'forex_model_input'
 generated using Kedro 0.18.12
 """
 
 import pandas as pd
 from kube_data_collector.utils.data_processing.utils import (
     convert_to_datetime,
-    round_columns,
 )
 
 
-def data_processor_node(df: pd.DataFrame) -> pd.DataFrame:
+def forex_model_input_node(df: pd.DataFrame) -> pd.DataFrame:
     """
     Process the input DataFrame using a sequence of transformations.
 
@@ -20,8 +19,8 @@ def data_processor_node(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
     - pd.DataFrame: The processed DataFrame.
     """
-    # Using pandas pipe to apply sequence of transformations
-    df = df.pipe(convert_to_datetime, column_name="date").pipe(
-        round_columns, columns=["open", "high", "low", "close"], decimals=5
+    df = (
+        df.pipe(convert_to_datetime, column_name="date")
+
     )
     return df

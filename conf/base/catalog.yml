@@ -28,3 +28,43 @@
 30_min_intermediate:
   type: pandas.CSVDataSet
   filepath: data/02_intermediate/forex/30_min.csv
+  
+  
+10_min_primary:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/forex/10_min.csv
+
+15_min_primary:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/forex/15_min.csv
+
+30_min_primary:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/forex/30_min.csv
+  
+  
+10_min_feature:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/forex/10_min.csv
+
+15_min_feature:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/forex/15_min.csv
+
+30_min_feature:
+  type: pandas.CSVDataSet
+  filepath: data/04_feature/forex/30_min.csv
+
+
+10_min_model_input:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/forex/10_min.csv
+
+15_min_model_input:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/forex/15_min.csv
+
+30_min_model_input:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/forex/30_min.csv
+
