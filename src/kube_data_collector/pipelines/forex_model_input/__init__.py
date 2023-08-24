@@ -1,5 +1,5 @@
 """
-This is a boilerplate pipeline 'data_processor'
+This is a boilerplate pipeline 'forex_model_input'
 generated using Kedro 0.18.12
 """
 

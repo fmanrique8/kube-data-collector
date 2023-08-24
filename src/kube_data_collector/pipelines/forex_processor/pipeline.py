@@ -1,5 +1,5 @@
 """
-This is a boilerplate pipeline 'data_processor'
+This is a boilerplate pipeline 'forex_processor'
 generated using Kedro 0.18.12
 """
 
@@ -7,9 +7,9 @@ from kedro.pipeline import Pipeline, node
 from .nodes import data_processor_node
 
 
-def create_pipeline(**kwargs) -> Pipeline:
+def create_pipeline() -> Pipeline:
     """
-    Creates the 'data_processor' pipeline.
+    Creates the 'forex_processor' pipeline.
 
     Returns:
         Pipeline: Kedro pipeline object containing the data processing nodes.
