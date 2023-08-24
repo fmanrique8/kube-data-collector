@@ -17,27 +17,39 @@ def create_pipeline() -> Pipeline:
     model_input_10_min_node = node(
         func=forex_model_input_node,
         inputs=[
-            "10_min_feature",
+            "10_min_primary",
         ],
-        outputs="10_min_model_input",
+        outputs=[
+            "10_min_model_input",
+            "10_min_t3_model_input",
+            "10_min_l3_model_input",
+        ],
         name="forex_model_input_node_10_min",
     )
 
     model_input_15_min_node = node(
         func=forex_model_input_node,
         inputs=[
-            "15_min_feature",
+            "15_min_primary",
         ],
-        outputs="15_min_model_input",
+        outputs=[
+            "15_min_model_input",
+            "15_min_t3_model_input",
+            "15_min_l3_model_input",
+        ],
         name="forex_model_input_node_15_min",
     )
 
     model_input_30_min_node = node(
         func=forex_model_input_node,
         inputs=[
-            "30_min_feature",
+            "30_min_primary",
         ],
-        outputs="30_min_model_input",
+        outputs=[
+            "30_min_model_input",
+            "30_min_t3_model_input",
+            "30_min_l3_model_input",
+        ],
         name="forex_model_input_node_30_min",
     )
 

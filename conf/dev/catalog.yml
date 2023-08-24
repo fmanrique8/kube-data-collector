@@ -1,0 +1,112 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+
+# Data definitions
+10_min_dataframe:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_10_min
+  type: pandas.SQLTableDataSet
+10_min_feature:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_10_min_feature
+  type: pandas.SQLTableDataSet
+10_min_intermediate:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_10_min_intermediate
+  type: pandas.SQLTableDataSet
+10_min_model_input:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_10_min_model_input
+  type: pandas.SQLTableDataSet
+10_min_primary:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_10_min_primary
+  type: pandas.SQLTableDataSet
+15_min_dataframe:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_15_min
+  type: pandas.SQLTableDataSet
+15_min_feature:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_15_min_feature
+  type: pandas.SQLTableDataSet
+15_min_intermediate:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_15_min_intermediate
+  type: pandas.SQLTableDataSet
+15_min_model_input:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_15_min_model_input
+  type: pandas.SQLTableDataSet
+15_min_primary:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_15_min_primary
+  type: pandas.SQLTableDataSet
+30_min_dataframe:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_30_min
+  type: pandas.SQLTableDataSet
+30_min_feature:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_30_min_feature
+  type: pandas.SQLTableDataSet
+30_min_intermediate:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_30_min_intermediate
+  type: pandas.SQLTableDataSet
+30_min_model_input:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_30_min_model_input
+  type: pandas.SQLTableDataSet
+30_min_primary:
+  credentials: postgres_credentials
+  save_args:
+    if_exists: replace
+    index: false
+  table_name: dev_forex_30_min_primary
+  type: pandas.SQLTableDataSet

@@ -30,12 +30,18 @@ def calculate_stochastic_oscillator(
     """
     # Check if DataFrame has at least n rows
     if df.shape[0] < n:
-        raise ValueError(f"DataFrame has less than {n} rows. Cannot compute rolling window of size {n}.")
+        raise ValueError(
+            f"DataFrame has less than {n} rows. Cannot compute rolling window of size {n}."
+        )
 
     # Rest of the function remains the same
     df["Lowest_Low"] = df[low_col].rolling(window=n).min()
     df["Highest_High"] = df[high_col].rolling(window=n).max()
-    df["%K"] = 100 * (df[close_col] - df["Lowest_Low"]) / (df["Highest_High"] - df["Lowest_Low"])
+    df["%K"] = (
+        100
+        * (df[close_col] - df["Lowest_Low"])
+        / (df["Highest_High"] - df["Lowest_Low"])
+    )
     df["%D"] = df["%K"].rolling(window=smoothing).mean()
 
     # Generate signals based on the crossing of %K and %D
@@ -47,8 +53,8 @@ def calculate_stochastic_oscillator(
     ]
     choices = ["Strong Buy", "Buy", "Strong Sell", "Sell"]
     df["Stochastic_signal"] = np.select(conditions, choices, default="Hold")
-    df['Stochastic_signal_num'] = df['Stochastic_signal'].map(signal_num_map)
+    df["Stochastic_signal_num"] = df["Stochastic_signal"].map(signal_num_map)
 
     # Drop temporary columns
-    df.drop(columns=['Lowest_Low', 'Highest_High'], inplace=True)
+    df.drop(columns=["Lowest_Low", "Highest_High"], inplace=True)
     return df

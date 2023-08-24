@@ -1,5 +1,5 @@
 """
-This is a boilerplate test file for pipeline 'data_processor'
+This is a boilerplate test file for pipeline 'forex_processor'
 generated using Kedro 0.18.12.
 Please add your pipeline tests here.
 

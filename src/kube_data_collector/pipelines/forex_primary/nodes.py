@@ -13,10 +13,14 @@ from kube_data_collector.utils.technical_indicators.momentum.relative_strenght_i
 from kube_data_collector.utils.technical_indicators.momentum.stochastic_oscillator import (
     calculate_stochastic_oscillator,
 )
+from kube_data_collector.utils.technical_indicators.momentum import (
+    compute_momentum_score,
+)
 
 from kube_data_collector.utils.data_processing.utils import forward_fill_and_median
 from kube_data_collector.utils.data_processing.utils import convert_to_datetime
-from kube_data_collector.utils.data_processing.utils import add_date_features
+
+# from kube_data_collector.utils.data_processing.utils import add_date_features
 
 
 def forex_primary_node(
@@ -42,7 +46,6 @@ def forex_primary_node(
     # Using pandas pipe to apply sequence of transformations
     df = (
         df.pipe(convert_to_datetime, column_name="date")
-        .pipe(add_date_features, column_name="date")
         .pipe(calculate_roc, column_name="close", close_n_periods=close_n_periods)
         .pipe(calculate_rsi, column_name="close", rsi_n_periods=rsi_n_periods)
         .pipe(
@@ -53,6 +56,7 @@ def forex_primary_node(
             n=so_n_periods["n"],
             smoothing=so_n_periods["smoothing"],
         )
+        .pipe(compute_momentum_score)
         .pipe(
             forward_fill_and_median,
             columns=[
@@ -67,6 +71,17 @@ def forex_primary_node(
                 "Stochastic_signal",
                 "Stochastic_signal_num",
             ],
+        )
+        # Ensure correct dtypes and limit float numbers
+        .round(
+            {"ROC": 5, "ROC_signal": 5, "RSI": 5, "%K": 5, "%D": 5, "momentum_score": 5}
+        )
+        .astype(
+            {
+                "ROC_signal_num": "int",
+                "RSI_signal_num": "int",
+                "Stochastic_signal_num": "int",
+            }
         )
     )
     return df

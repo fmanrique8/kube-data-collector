@@ -1,5 +1,5 @@
 """
-This is a boilerplate pipeline 'data_processor'
+This is a boilerplate pipeline 'forex_processor'
 generated using Kedro 0.18.12
 """
 
@@ -21,7 +21,19 @@ def data_processor_node(df: pd.DataFrame) -> pd.DataFrame:
     - pd.DataFrame: The processed DataFrame.
     """
     # Using pandas pipe to apply sequence of transformations
-    df = df.pipe(convert_to_datetime, column_name="date").pipe(
-        round_columns, columns=["open", "high", "low", "close"], decimals=5
+    df = (
+        df.pipe(convert_to_datetime, column_name="date").pipe(
+            round_columns, columns=["open", "high", "low", "close"], decimals=5
+        )
+        # Ensure correct dtypes
+        .astype(
+            {
+                "instrument": "str",
+                "open": "float",
+                "high": "float",
+                "low": "float",
+                "close": "float",
+            }
+        )
     )
     return df
